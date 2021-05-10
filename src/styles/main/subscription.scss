@@ -1,0 +1,190 @@
+.subscription {
+	margin-bottom: 130px;
+
+    &__title {
+        font-size: 32px;
+        font-weight: 600;
+        color: #535353;
+        text-align: left;
+        text-transform: uppercase;
+        margin-bottom: 70px;
+
+        @media screen and (max-width: 801px) {
+            text-align: center;
+		    margin-bottom: 50px;
+        }
+
+        @media screen and (max-width: 499px) {
+            margin-bottom: 35px;
+        }
+    }
+
+    &__join {
+        @include flex-display;
+        margin-bottom: 35px;
+
+        @media screen and (max-width: 801px) {
+            flex-direction: column;
+        }
+    }
+
+    &__description {
+        flex: 0 0 45%;
+        @include adaptiv-font(20, 16, 600, #555555);
+        word-spacing: 2px;
+
+        @media screen and (max-width: 801px) {
+            text-align: center;
+		    margin-bottom: 25px;
+        }
+    }
+
+    &__form {
+        flex: 0 0 45%;
+
+        @media screen and (max-width: 801px) {
+            width: 90%;
+        }
+
+        @media screen and (max-width: 399px) {
+            flex: 0 0 100%;
+        }
+    }
+
+    &__input {
+        margin-right: 25px;
+        width: 60%;
+        border-bottom: 2px solid #000;
+        vertical-align: bottom;
+        font-size: 18px;
+        padding: 5px;
+
+        @media screen and (max-width: 399px) {
+            width: 90%;
+		    margin-bottom: 15px;
+        }
+    }
+
+    &__btn {
+        padding: 5px 10px;
+        width: 30%;
+        border: 2px solid #000;
+        background: transparent;
+        @include adaptiv-font(16, 14, 600, #000);
+        text-align-last: center;
+        text-transform: uppercase;
+        transition: all .3s ease;
+
+        &:hover {
+            background: #222;
+            color: #fff;
+        }
+
+        @media screen and (max-width: 399px) {
+            width: 90%;
+        }
+    }
+
+    &__border {
+        height: 15px;
+        background-image: linear-gradient(to right, #39b2c3 20%, #7dc9a3 30%, #39b2c3 80%, #7dc9a3 100%);
+        margin-bottom: 60px;
+    }
+
+    &__icons {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__wrapper {
+            width: 100%;
+            position: relative;
+
+            @media screen and (max-width: 801px) {
+                width: 50%;
+		        overflow: hidden;
+            }
+
+            @media screen and (max-width: 599px) {
+                width: 70%;
+            }
+
+            @media screen and (max-width: 399px) {
+                flex: 0 0 90%;
+            }
+        }
+
+        &__inner {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+        }
+    }
+
+    &__arrow {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        height: 100%;
+        top: 0;
+
+        &-circle {
+            padding: 5px;
+            background: #000;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        &-left {
+            left: 0;
+        }
+
+        &-right {
+            right: 0;
+        }
+
+        @media screen and (max-width: 801px) {
+            display: flex;
+        }
+    }
+
+    &__box {
+        flex: 0 0 20%;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @media screen and (max-width: 801px) {
+            flex: 0 0 100%;
+            margin-right: 0;
+        }
+    }
+
+    &__name {
+        margin-left: 15px;
+        color: #1e1e1e;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        word-spacing: 5px;
+    }
+
+    @media screen and (max-width: 801px) {
+        margin-bottom: 70px;
+    }
+}

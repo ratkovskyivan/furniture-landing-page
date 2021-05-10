@@ -1,0 +1,28 @@
+{
+  "name": "furniture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass --output-style compressed -o build/css src/styles/index.scss",
+    "uglify": "uglifyjs src/js/*.js -m -c -o build/js/app.js",
+    "imagemin": "imagemin src/images/*/* --out-dir=build/images",
+    "serve": "browser-sync start --server './build' --files 'buils/css/*.css', 'build/js/*.js'",
+    "build:css": "npm run scss",
+    "build:js": "npm run uglify",
+    "watch:css": "onchange \"src/styles/*.scss\" -- npm run build:css",
+    "watch:js": "onchange \"src/js/*.js\" -- npm run build:js\"",
+    "watch": "run-p serve watch:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "imagemin-cli": "^6.0.0",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "uglify-js": "^3.13.4"
+  }
+}

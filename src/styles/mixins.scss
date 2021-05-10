@@ -1,0 +1,13 @@
+@mixin adaptiv-font($pcSize, $mobSize, $weight, $color) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: 1600;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin flex-display {
+    display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
